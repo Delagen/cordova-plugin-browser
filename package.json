@@ -1,6 +1,6 @@
 {
   "name": "@delagen/cordova-plugin-browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open browser in your app",
   "types": "./types/index.d.ts",
   "cordova": {
