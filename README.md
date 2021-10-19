@@ -1,4 +1,4 @@
-# cordova-plugin-browser<br>[![NPM version][npm-version]][npm-url] [![NPM downloads][npm-downloads]][npm-url] [![Twitter][twitter-follow]][twitter-url]
+# cordova-plugin-browser<br>[![NPM version][npm-version]][npm-url] [![NPM downloads][npm-downloads]][npm-url]
 > Open url in external browser
 
 ## Installation
