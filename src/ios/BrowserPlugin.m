@@ -11,12 +11,7 @@
         NSURL* baseUrl = [self.webViewEngine URL];
         NSURL* absoluteUrl = [[NSURL URLWithString:url relativeToURL:baseUrl] absoluteURL];
         @try {
-            if #available(iOS 10.0, *) {
-                [[UIApplication sharedApplication] open:absoluteUrl];
-            }
-            else {
-                [[UIApplication sharedApplication] openURL:absoluteUrl];
-            }
+            [[UIApplication sharedApplication] openURL:absoluteUrl options:@{} completionHandler:nil];
         }
         @catch (NSException *exception) {
             pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:exception.reason];
