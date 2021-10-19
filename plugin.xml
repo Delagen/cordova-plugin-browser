@@ -1,0 +1,40 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-browser"
+        version="1.0.0">
+
+    <name>BrowserPlugin</name>
+    <description>Open browser in app</description>
+    <license>MIT</license>
+    <keywords>cordova</keywords>
+    <repo>https://github.com/Delagen/cordova-plugin-browser</repo>
+    <issue>https://github.com/Delagen/cordova-plugin-browser/issues</issue>
+
+    <js-module src="www/browser-plugin.js" name="BrowserPlugin">
+        <clobbers target="cordova.plugins.browserPlugin"/>
+    </js-module>
+
+    <engines>
+        <engine name="cordova" version=">=7.1.0"/>
+        <engine name="cordova-android" version=">=7.0.0"/>
+        <engine name="cordova-ios" version=">=4.5.0"/>
+    </engines>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="BrowserPlugin">
+                <param name="ios-package" value="BrowserPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/BrowserPlugin.h"/>
+        <source-file src="src/ios/BrowserPlugin.m"/>
+    </platform>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="BrowserPlugin">
+                <param name="android-package" value="com.delagen.cordova.browser.BrowserPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/BrowserPlugin.java" target-dir="src/com/delagen/cordova/browser/"/>
+    </platform>
+</plugin>

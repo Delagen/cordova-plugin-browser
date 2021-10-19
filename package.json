@@ -1,0 +1,36 @@
+{
+  "name": "@delagen/cordova-plugin-browser",
+  "version": "0.0.0",
+  "description": "Open browser in your app",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "@delagen/cordova-plugin-browser",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Delagen/cordova-plugin-browser.git"
+  },
+  "author": {
+    "name": "Vokhmyanin Sergey",
+    "email": "delagen@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Delagen/cordova-plugin-browser/issues"
+  },
+  "homepage": "https://github.com/Delagen/cordova-plugin-browser#readme",
+  "keywords": [
+    "cordova",
+    "browser",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "scripts": {
+    "version": "sh -c \"sed -i -E s/'(version[[:space:]]*=[[:space:]]*\")[[:digit:]]+.[[:digit:]]+.[[:digit:]]+(\")'/'\u0001'${npm_package_version}'\u0002'/g ./plugin.xml\""
+  }
+}
